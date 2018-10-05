@@ -18,7 +18,7 @@ int index = -1,i;
 void setup()
 {
   Serial.begin(9600);
-  pinMode(enableA, OUTPUT);
+  pinMode(enableA,OUTPUT);
   pinMode(pinA1, OUTPUT);
   pinMode(pinA2, OUTPUT);
 
@@ -328,6 +328,7 @@ void forward(int time)
 {
   motorAForward(3);
   motorBForward(3);
+
   delay(time);
 }
 
