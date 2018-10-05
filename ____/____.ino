@@ -17,6 +17,7 @@ int index = -1,i;
 
 void setup()
 {
+  digitalRead(pin);
   Serial.begin(9600);
   pinMode(enableA,OUTPUT);
   pinMode(pinA1, OUTPUT);
@@ -429,11 +430,11 @@ void motorAForward(int i)
 
 }
 
-void motorABackward(int i)
+void motorABackward(int i){
    if(i==1){
      analogWrite(enableA,10);
      digitalWrite(pinA1, LOW);
-  digitalWrite(pinA2, HIGH);
+     digitalWrite(pinA2, HIGH);
   }
   else if(i==2){
      analogWrite(enableA, Speed*3/4);
